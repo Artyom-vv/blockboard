@@ -1,0 +1,84 @@
+@theme {
+  /* Font Weights */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --font-weight-semibold: 600;
+}
+
+@utility font-heading {
+  white-space: pre-wrap;
+  font-family: var(--font-inter);
+}
+
+@utility text-body {
+  white-space: pre-wrap;
+  font-weight: var(--font-weight-regular);
+  @apply text-neutral-fg-2-rest;
+}
+
+@utility text-heading {
+  font-weight: var(--font-weight-bold);
+  @apply font-heading;
+}
+
+//@mixin text-body($size) {
+//  @apply leading-body-#{$size} text-body;
+//}
+
+@layer utilities {
+  .text-body-400 {
+    @apply text-body leading-[22px] text-[16px];
+  }
+  .text-body-300 {
+    @apply text-body text-neutral-fg-3-rest leading-[20px] text-[14px];
+  }
+  .text-body-200 {
+    @apply text-body text-neutral-fg-3-rest leading-[16px] text-[12px];
+  }
+
+  p {
+    margin: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6
+  {
+    margin: 0;
+    @apply text-heading;
+  }
+  h3 {
+    @apply text-[24px] leading-[32px] font-semibold;
+  }
+  h4 {
+    @apply text-[24px] leading-[30px];
+  }
+  //
+  //h6 {
+  //  @include text-heading('small')
+  //}
+  //
+  //h5 {
+  //  @include text-heading('normal')
+  //}
+  //
+  //h4 {
+  //  @include text-heading('big')
+  //}
+  //
+  //h3 {
+  //  @include text-heading('large')
+  //}
+  //
+  //h2 {
+  //  @include text-heading('1x-large')
+  //}
+  //
+  h1 {
+    @apply leading-[72px] text-[60px];
+  }
+}

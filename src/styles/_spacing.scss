@@ -1,0 +1,27 @@
+@layer base {
+  @theme {
+    /* Spacing */
+    --spacing-2x-small: var(--dimension-50);
+    --spacing-1x-small: var(--dimension-100);
+    --spacing-small: var(--dimension-150);
+    --spacing-normal: var(--dimension-200);
+    --spacing-large: var(--dimension-300);
+    --spacing-1x-large: var(--dimension-400);
+    --spacing-2x-large: var(--dimension-500);
+    --spacing-3x-large: var(--dimension-600);
+    --spacing-4x-large: var(--dimension-700);
+    --spacing-5x-large: var(--dimension-800);
+
+    /* Padding */
+    --padding-2x-small: var(--dimension-50);
+    --padding-1x-small: var(--dimension-100);
+    --padding-small: var(--dimension-150);
+    --padding-normal: var(--dimension-200);
+    --padding-large: var(--dimension-300);
+    --padding-1x-large: var(--dimension-400);
+    --padding-2x-large: var(--dimension-500);
+    --padding-3x-large: var(--dimension-600);
+    --padding-4x-large: var(--dimension-700);
+    --padding-5x-large: var(--dimension-800);
+  }
+}

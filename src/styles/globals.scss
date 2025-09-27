@@ -1,0 +1,48 @@
+@use "normolize";
+@use "tailwind";
+@use "breakpoints";
+@use "typography";
+@use "colors";
+@use "utilities";
+@use "fonts";
+@use "corners";
+@use "shadows";
+
+@layer normolize, utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+svg {
+  display: block;
+}
+
+
+:root {
+  --background: #ffffff;
+  --foreground: #000000;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-inter: var(--font-inter);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), serif;
+}

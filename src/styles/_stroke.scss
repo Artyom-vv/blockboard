@@ -1,0 +1,12 @@
+:root {
+  --stroke-normal: 1px;
+  --stroke-thick: 2px;
+}
+
+@utility border-thick {
+  border-width: var(--stroke-thick);
+}
+
+@utility border-normal {
+  border-width: var(--stroke-normal);
+}

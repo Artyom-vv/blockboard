@@ -1,0 +1,13 @@
+@layer base {
+  @theme {
+    /* Size */
+    --size-3x-small: var(--dimension-150);
+    --size-2x-small: var(--dimension-200);
+    --size-1x-small: var(--dimension-250);
+    --size-small: var(--dimension-300);
+    --size-normal: var(--dimension-400);
+    --size-big: var(--dimension-500);
+    --size-large: var(--dimension-600);
+    --size-1x-large: var(--dimension-700);
+  }
+}

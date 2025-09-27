@@ -1,0 +1,11 @@
+@utility container {
+  @apply mx-auto px-[16px] xl:px-[32px];
+}
+
+@utility section {
+  @apply xl:py-[64px] py-[32px];
+}
+
+@utility link {
+  @apply text-[18px] font-medium p-[10px] active:text-black/70 text-black;
+}
