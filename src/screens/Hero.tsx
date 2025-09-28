@@ -5,7 +5,7 @@ import boardblurimg from '@/assets/boardblur.png'
 
 const Hero = () => {
     return (
-        <section className="container grid grid-cols-12 pt-[160px] pb-[40px]">
+        <section className="container grid grid-cols-12 pt-[160px] pb-[70px] overflow-hidden">
             <div className="col-start-2 col-span-5 flex flex-col gap-[22px]">
                 <h1 className="pt-[62px]">Top experts,<br/>
                     one <span className="text-[#0094FF] underline">click</span> away</h1>
