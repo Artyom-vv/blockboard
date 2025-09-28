@@ -23,7 +23,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} antialiased`}
       >
-      <div className="wrapper">
+      <div className="wrapper h-full min-h-full overflow-x-hidden">
           <Header />
           {children}
       </div>
