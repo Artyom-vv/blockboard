@@ -5,7 +5,7 @@ import {cn} from "@/lib/cn";
 interface CategoryCardProps {
     title: string;
     subtitle?: string;
-    icon?: React.ReactNode;
+    icon: string;
     tint: string;
     className?: string;
 }
@@ -41,14 +41,12 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
             glowBlend="soft-light"
         >
 
-            <div className="icon-box grow"></div>
-            <div className="flex flex-col gap-[6px]">
+            <div className="rounded-[10px] flex justify-center grow">
                 {icon && (
-                    <div className="w-[40px] h-[40px] rounded-[10px] flex items-center justify-center">
-                        {icon}
-                    </div>
+                    <img className="w-[52px] h-[52px]" src={icon} alt={title}/>
                 )}
-
+            </div>
+            <div className="flex flex-col gap-[6px]">
                 <div className="text-[20px] font-semibold text-white">{title}</div>
                 {subtitle && (
                     <div className="text-body-300 text-white">
