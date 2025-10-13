@@ -5,7 +5,7 @@ import {cn} from "@/lib/cn";
 interface CategoryCardProps {
     title: string;
     subtitle?: string;
-    icon: string;
+    icon: React.ReactNode;
     tint: string;
     className?: string;
 }
@@ -21,7 +21,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
         <Glass
             wrapperClassName="cursor-pointer w-full max-w-[260px]"
             contentClassName={cn(
-                "grow h-[159px] p-[20px] flex flex-col",
+                "grow h-[159px] px-[10px] py-[20px] flex flex-col",
                 className
             )}
             radius={25}
@@ -43,11 +43,13 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
 
             <div className="rounded-[10px] flex justify-center grow">
                 {icon && (
-                    <img className="w-[52px] h-[52px]" src={icon} alt={title}/>
+                    <div className="size-[64px]">
+                        {icon}
+                    </div>
                 )}
             </div>
-            <div className="flex flex-col gap-[6px]">
-                <div className="text-[20px] font-semibold text-white">{title}</div>
+            <div className="flex flex-col gap-[6px] text-center">
+                <div className="text-[18px] font-semibold text-white">{title}</div>
                 {subtitle && (
                     <div className="text-body-300 text-white">
                         {subtitle}

@@ -1,14 +1,14 @@
 import React from 'react';
 import CategoryCard from "@/app/(landing)/components/CategoryCard";
 import ArrowRightIcon from "@/assets/icons/arrow-right.svg";
-import hammer from '@/assets/icons/hammer.png'
-import paint from '@/assets/icons/paint.png'
-import terminal from '@/assets/icons/terminal.png'
-import web from '@/assets/icons/web.png'
-import wrench from '@/assets/icons/wrench.png'
-import camera from '@/assets/icons/camera.png'
-import mp from '@/assets/icons/minecraft-player.png'
-import cube from '@/assets/icons/cube.png'
+import Hammer from '@/assets/icons/hammer.svg'
+import Palett from '@/assets/icons/palett.svg'
+import Web from '@/assets/icons/web.svg'
+import Conf from '@/assets/icons/conf.svg'
+import Code from '@/assets/icons/code.svg'
+import Skin from '@/assets/icons/skin.svg'
+import Cube from '@/assets/icons/3d.svg'
+import Video from '@/assets/icons/video.svg'
 
 const Categories = () => {
     return (
@@ -16,59 +16,59 @@ const Categories = () => {
             <div className="container">
                 <div className="col-start-3 col-span-8 flex flex-col items-center gap-[50px]">
                     <h2 className="text-[60px] font-semibold text-white">Popular categories</h2>
-                    <div className="py-[10px] grid grid-cols-4 gap-[30px]">
+                    <div className="w-full py-[10px] grid grid-cols-4 gap-[24px]">
                         <CategoryCard
                             tint="#5691CD"
                             title="Building"
                             subtitle="100 services"
-                            icon={hammer.src}
+                            icon={<Hammer />}
                         />
                         <CategoryCard
                             tint="#51C6C4"
                             title="Design"
                             subtitle="204 services"
-                            icon={paint.src}
+                            icon={<Palett/>}
                         />
                         <CategoryCard
                             tint="#775FD8"
                             title="Development"
                             subtitle="43 services"
-                            icon={terminal.src}
+                            icon={<Code/>}
                         />
                         <CategoryCard
                             tint="#CB58CF"
                             title="Web"
                             subtitle="23 services"
-                            icon={web.src}
+                            icon={<Web/>}
                         />
                         <CategoryCard
                             tint="#38CF81"
                             title="Configure"
                             subtitle="100 services"
-                            icon={wrench.src}
+                            icon={<Conf/>}
                         />
                         <CategoryCard
                             tint="#E38538"
                             title="Video"
                             subtitle="204 services"
-                            icon={camera.src}
+                            icon={<Video/>}
                         />
                         <CategoryCard
                             tint="#DA579D"
                             title="Skin Design
                             " subtitle="43 services"
-                            icon={mp.src}
+                            icon={<Skin/>}
                         />
                         <CategoryCard
                             tint="#8757DA"
                             title="3D Modeling
                             " subtitle="23 services"
-                            icon={cube.src}
+                            icon={<Cube/>}
                         />
                     </div>
                     <button className="bg-white rounded-[20px] py-[15px] px-[30px] flex items-center gap-[8px] border-1 border-[#151515]/10 border-solid">
                         View all categories
-                        <ArrowRightIcon/>
+                        <ArrowRightIcon className="fill-black"/>
                     </button>
                 </div>
             </div>

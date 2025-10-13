@@ -21,14 +21,14 @@ const Header = () => {
                     blurClassName="backdrop-blur-[14px]"
                     radius={30}
                     tint="#F9F7F7"
-                    baseOpacity={0.45}
+                    baseOpacity={0.6}
                     dispersion
                     noise
                     highlight
                     borderClassName="border border-white/30"
                     interactiveGlow
                     glowRadius={800}
-                    glowStrength={0.12}
+                    glowStrength={0.4}
                     glowBlend="soft-light"
                 >
                     <Link href="/"><Logo/></Link>
