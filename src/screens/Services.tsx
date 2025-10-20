@@ -2,42 +2,50 @@ import React from 'react';
 import ArrowRightIcon from '@/assets/icons/arrow-right.svg'
 import ServiceCard from "@/components/ServiceCard/ServiceCard";
 
+import img1 from '@/assets/services/1.webp'
+import img2 from '@/assets/services/2.webp'
+import img3 from '@/assets/services/3.webp'
+import img4 from '@/assets/services/4.webp'
+import img5 from '@/assets/services/5.webp'
+import img6 from '@/assets/services/6.webp'
+
 const Services = () => {
     return (
         <section className="py-[40px]">
             <div className="container grid grid-cols-12">
-                <div className="col-start-2 col-span-10 flex flex-col items-center gap-[35px]">
+                <div className="col-span-12 flex flex-col items-center gap-[35px]">
                     <h2 className="text-[60px] font-semibold">Services right for you</h2>
                     <div className="grid grid-cols-3 gap-[10px]">
                         <ServiceCard
-                            src="https://i.pinimg.com/736x/46/e0/0f/46e00f905aa75a6a27bc6c8fb19772ba.jpg"
+                            images={[img1.src, img2.src, img3.src]}
                             title="I will develop modern responsive weblow website"
                         />
                         <ServiceCard
-                            src="https://i.pinimg.com/736x/52/32/37/523237f10583691e8dabf26a100cac95.jpg"
+                            images={[img2.src, img3.src, img4.src]}
                             title="I will develop modern responsive weblow website"
                         />
                         <ServiceCard
-                            src="https://i.pinimg.com/736x/ca/35/84/ca35849c8dbbbe0f4771936d2a84810d.jpg"
+                            images={[img3.src, img4.src, img5.src]}
                             title="I will develop modern responsive weblow website"
                         />
                         <ServiceCard
-                            src="https://i.pinimg.com/736x/9a/c4/ec/9ac4ec219fbd2ba83c5b23d50841debc.jpg"
+                            images={[img4.src, img5.src, img6.src]}
                             title="I will develop modern responsive weblow website"
                         />
                         <ServiceCard
-                            src="https://i.pinimg.com/736x/ca/35/84/ca35849c8dbbbe0f4771936d2a84810d.jpg"
+                            images={[img5.src, img6.src, img1.src]}
                             title="I will develop modern responsive weblow website"
                         />
                         <ServiceCard
-                            src="https://i.pinimg.com/736x/63/41/04/6341049fb20992c88cfbd9be7e8c3ed8.jpg"
+                            images={[img6.src, img1.src, img2.src]}
                             title="I will develop modern responsive weblow website"
                         />
                     </div>
                     <button
-                        className="bg-white rounded-[20px] py-[15px] px-[30px] flex items-center gap-[8px] border-1 border-[#151515]/10 border-solid">
-                        View all services
-                        <ArrowRightIcon className="fill-black"/>
+                        className="group bg-white rounded-[20px] py-[15px] px-[30px] flex items-center gap-[8px] border-1 border-[#151515]/10 border-solid">
+                        <span className="text-[20px] font-medium">View all services</span>
+                        <ArrowRightIcon
+                            className="fill-black transition-transform duration-200 ease-out group-hover:translate-x-[3px]"/>
                     </button>
                 </div>
             </div>

@@ -1,15 +1,21 @@
-import React from 'react';
+import React, {FC} from 'react';
 import {Glass} from "@/components/ui/Glass";
 
-const QualityCard = () => {
+interface QualityCardProps {
+    icon: React.ReactNode;
+    title: string;
+    text: string;
+}
+
+const QualityCard: FC<QualityCardProps> = ({icon, title, text}) => {
     return (
         <Glass
             wrapperClassName="grow h-[233px] max-w-[261px]"
-            contentClassName="py-[30px] px-[20px] flex flex-col gap-[10px]"
+            contentClassName="py-[30px] px-[20px] flex flex-col gap-[10px] h-full"
             radius={30}
-            blurClassName="backdrop-blur-[14px]"
+            blurClassName="backdrop-blur-[4px]"
             tint="#ffffff"
-            baseOpacity={0.30}
+            baseOpacity={0.1}
             borderClassName="border border-white/20"
             highlight
             highlightAngle={-127}
@@ -22,12 +28,13 @@ const QualityCard = () => {
             glowStrength={0.15}
             glowBlend="soft-light"
         >
-            <div className="flex">
-                <div className="shrink-0 size-[64px]"></div>
-                <p className="text-[22px] font-bold">All talents in one place</p>
+            <div className="flex items-center">
+                <div className="shrink-0 size-[64px]">
+                    {icon}
+                </div>
+                <p className="text-[22px] font-bold">{title}</p>
             </div>
-            <p className="text-[#535353] text-[17px]">All talents in one place
-                Find the right specialist for any task — quickly and easily.</p>
+            <p className="text-[#535353] text-[17px]">{text}</p>
         </Glass>
     );
 };

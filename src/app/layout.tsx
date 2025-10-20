@@ -2,6 +2,11 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@/styles/globals.scss"
 import Header from "@/components/Header/Header";
+import { register } from 'swiper/element/bundle';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/effect-fade'
+register();
 
 const inter = Inter({
   variable: "--font-inter",

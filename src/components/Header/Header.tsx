@@ -18,7 +18,7 @@ const Header = () => {
                     wrapperClassName="col-span-12"
                     contentClassName="flex justify-between items-center"
                     insetPadding="py-[21px] px-[33px]"
-                    blurClassName="backdrop-blur-[14px]"
+                    blurClassName="backdrop-blur-[11px]"
                     radius={30}
                     tint="#F9F7F7"
                     baseOpacity={0.6}

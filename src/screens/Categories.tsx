@@ -21,7 +21,7 @@ const Categories = () => {
                             tint="#5691CD"
                             title="Building"
                             subtitle="100 services"
-                            icon={<Hammer />}
+                            icon={<Hammer/>}
                         />
                         <CategoryCard
                             tint="#51C6C4"
@@ -66,10 +66,13 @@ const Categories = () => {
                             icon={<Cube/>}
                         />
                     </div>
-                    <button className="bg-white rounded-[20px] py-[15px] px-[30px] flex items-center gap-[8px] border-1 border-[#151515]/10 border-solid">
-                        View all categories
-                        <ArrowRightIcon className="fill-black"/>
+                    <button
+                        className="group bg-white rounded-[20px] py-[15px] px-[30px] flex items-center gap-[8px] border-1 border-[#151515]/10 border-solid">
+                        <span className="text-[20px] font-medium">View all categories</span>
+                        <ArrowRightIcon
+                            className="fill-black transition-transform duration-200 ease-out group-hover:translate-x-[3px]"/>
                     </button>
+
                 </div>
             </div>
         </section>
