@@ -1,6 +1,9 @@
 import React from 'react';
 import ArrowRightIcon from '@/assets/icons/arrow-right.svg'
 import ServiceCard from "@/components/ServiceCard/ServiceCard";
+import dynamic from 'next/dynamic';
+
+const FadeInWithSSR = dynamic(() => import('@/components/FadeIn'), { ssr: true });
 
 import img1 from '@/assets/services/1.webp'
 import img2 from '@/assets/services/2.webp'
@@ -15,7 +18,7 @@ const Services = () => {
             <div className="container grid grid-cols-12">
                 <div className="col-span-12 flex flex-col items-center gap-[35px]">
                     <h2 className="text-[60px] font-semibold">Services right for you</h2>
-                    <div className="grid grid-cols-3 gap-[10px]">
+                    <FadeInWithSSR stagger={0.1} className="grid grid-cols-3 gap-[10px]">
                         <ServiceCard
                             images={[img1.src, img2.src, img3.src]}
                             title="I will develop modern responsive weblow website"
@@ -40,7 +43,8 @@ const Services = () => {
                             images={[img6.src, img1.src, img2.src]}
                             title="I will develop modern responsive weblow website"
                         />
-                    </div>
+                    </FadeInWithSSR>
+
                     <button
                         className="group bg-white rounded-[20px] py-[15px] px-[30px] flex items-center gap-[8px] border-1 border-[#151515]/10 border-solid">
                         <span className="text-[20px] font-medium">View all services</span>

@@ -5,6 +5,9 @@ import BgShape from '@/assets/quality-bg-shape.svg'
 import Checkmark from '@/assets/icons/checkmark-seal-svgrepo-com.svg'
 import Finance from '@/assets/icons/money-finance-business-cash-currency-coin-save-svgrepo-com.svg'
 import People from '@/assets/icons/people-svgrepo-com.svg'
+import dynamic from 'next/dynamic';
+
+const FadeInWithSSR = dynamic(() => import('@/components/FadeIn'), { ssr: true });
 
 const Quality = () => {
     return (
@@ -16,7 +19,7 @@ const Quality = () => {
                         <span className="relative z-20">What makes Blockboard different?</span>
                         <WordShape className="absolute top-[73px] -left-[25px]" />
                     </h1>
-                    <div className="grow flex justify-end gap-[10px] py-[10px]">
+                    <FadeInWithSSR stagger={0.1} initialScale={0.99} className="grow flex justify-end gap-[10px] py-[10px]">
                         <QualityCard
                             title="All talents in one place"
                             text="All talents in one place
@@ -33,7 +36,7 @@ const Quality = () => {
                             text="Keep all project discussions in one place — clear and organized."
                             icon={<People/>}
                         />
-                    </div>
+                    </FadeInWithSSR>
                 </div>
             </div>
         </section>

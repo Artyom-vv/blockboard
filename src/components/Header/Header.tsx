@@ -10,7 +10,7 @@ const Header = () => {
 
     return (
         <header
-            style={{paddingRight: scrollbarWidth + "px"}}
+            style={{paddingRight: scrollbarWidth ? scrollbarWidth + "px" : "15px"}}
             className="fixed top-[25px] left-0 w-[100vw] z-50"
         >
             <div className="container grid grid-cols-12">

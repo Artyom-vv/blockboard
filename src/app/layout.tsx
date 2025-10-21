@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@/styles/globals.scss"
 import Header from "@/components/Header/Header";
-import { register } from 'swiper/element/bundle';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/effect-fade'
-register();
+import Footer from "@/components/Footer/Footer";
+import React from "react";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -31,6 +31,7 @@ export default function RootLayout({
       <div className="wrapper h-full min-h-full overflow-x-hidden">
           <Header />
           {children}
+          <Footer/>
       </div>
       </body>
     </html>

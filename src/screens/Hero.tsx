@@ -2,14 +2,18 @@ import React from 'react';
 import Search from '@/assets/search.svg'
 import boardimg from '@/assets/board.png'
 import boardblurimg from '@/assets/boardblur.png'
+import dynamic from 'next/dynamic';
+
+const FadeInWithSSR = dynamic(() => import('@/components/FadeIn'), { ssr: true });
 
 const Hero = () => {
     return (
-        <section className="overflow-hidden">
+        <section className="overflow-hidden h-full flex flex-col justify-center">
             <div className="container grid grid-cols-12 pt-[160px] pb-[70px]">
-                <div className="ml-[50px] col-span-6 flex flex-col gap-[22px]">
+                <FadeInWithSSR stagger={0.03} className="ml-[50px] col-span-6 flex flex-col gap-[22px]">
                     <h1 className="pt-[62px]">Top experts,<br/>
                         one <span className="text-[#0094FF] underline">click</span> away</h1>
+
                     <p className="text-black/50 text-[25px]">Find the right expert for your project, save
                         time, <br/> and get started today</p>
                     <div className="flex relative">
@@ -29,7 +33,7 @@ const Hero = () => {
                         <span className="bg-[#DAFFFA]">Design</span>
                         <span className="bg-[#EBFFDA]">Development</span>
                     </div>
-                </div>
+                </FadeInWithSSR>
                 <div className="pointer-events-none relative col-span-6 w-[594px]">
                     <img className="relative z-10" src={boardimg.src} alt="board"/>
                     <img className="z-[0] absolute -bottom-[24px] left-1/2 -translate-x-1/2 blur-[60px] scale-140"

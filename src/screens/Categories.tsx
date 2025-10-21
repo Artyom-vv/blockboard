@@ -9,6 +9,9 @@ import Code from '@/assets/icons/code.svg'
 import Skin from '@/assets/icons/skin.svg'
 import Cube from '@/assets/icons/3d.svg'
 import Video from '@/assets/icons/video.svg'
+import dynamic from 'next/dynamic';
+
+const FadeInWithSSR = dynamic(() => import('@/components/FadeIn'), { ssr: true });
 
 const Categories = () => {
     return (
@@ -16,7 +19,8 @@ const Categories = () => {
             <div className="container">
                 <div className="col-start-3 col-span-8 flex flex-col items-center gap-[50px]">
                     <h2 className="text-[60px] font-semibold text-white">Popular categories</h2>
-                    <div className="w-full py-[10px] grid grid-cols-4 gap-[24px]">
+                    <FadeInWithSSR stagger={0.06} className="w-full py-[10px] grid grid-cols-4 gap-[24px]">
+
                         <CategoryCard
                             tint="#5691CD"
                             title="Building"
@@ -65,7 +69,8 @@ const Categories = () => {
                             " subtitle="23 services"
                             icon={<Cube/>}
                         />
-                    </div>
+                    </FadeInWithSSR>
+
                     <button
                         className="group bg-white rounded-[20px] py-[15px] px-[30px] flex items-center gap-[8px] border-1 border-[#151515]/10 border-solid">
                         <span className="text-[20px] font-medium">View all categories</span>
