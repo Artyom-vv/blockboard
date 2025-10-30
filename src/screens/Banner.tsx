@@ -4,7 +4,7 @@ import {Glass} from "@/components/ui/Glass";
 const Banner = () => {
     return (
         <div className="container -mt-[120px]">
-            <div className="col-span-full bg-[#0094FF] flex items-center justify-between py-[41px] px-[53px] rounded-[30px]">
+            <div className="col-start-2 col-span-10 bg-[#0094FF] flex items-center justify-between py-[41px] px-[53px] rounded-[30px]">
                 <div className="flex flex-col gap-[10px] text-white">
                     <h2 className="text-[40px] font-bold">Every Talent Matters</h2>
                     <p className="text-[20px] font-medium">Your Creativity and Skills Can Change Someone’s Business</p>

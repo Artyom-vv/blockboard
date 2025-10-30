@@ -34,7 +34,7 @@ const ServiceCard: FC<ServiceCardProps> = ({ images, title }) => {
                     slidesPerView={1}
                 >
                     {images.map((src, index) => (
-                        <SwiperSlide key={index}>
+                        <SwiperSlide key={index+src}>
                             <img className="object-cover object-center h-full w-full" src={src} alt={title} />
                         </SwiperSlide>
                     ))}

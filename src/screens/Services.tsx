@@ -14,11 +14,11 @@ import img6 from '@/assets/services/6.webp'
 
 const Services = () => {
     return (
-        <section className="py-[40px]">
+        <section className="pt-[40px]">
             <div className="container grid grid-cols-12">
                 <div className="col-span-12 flex flex-col items-center gap-[35px]">
                     <h2 className="text-[60px] font-semibold">Services right for you</h2>
-                    <FadeInWithSSR stagger={0.1} className="grid grid-cols-3 gap-[10px]">
+                    <FadeInWithSSR stagger={0.2} className="grid grid-cols-3 gap-[10px]">
                         <ServiceCard
                             images={[img1.src, img2.src, img3.src]}
                             title="I will develop modern responsive weblow website"
